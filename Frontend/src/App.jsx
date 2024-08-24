@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import data from "./data";
 import axios from "axios";
 
 function App() {
@@ -37,7 +36,7 @@ function App() {
       return;
     }
 
-    const response = await axios.post("http://localhost:4000/", {
+    const response = await axios.post("https://ez-shortner-api.vercel.app/", {
       originalUrl: userInput,
     });
     const fetchedShortUrl = response.data.shortUrl;
