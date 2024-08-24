@@ -33,7 +33,7 @@ app.post("/", upload.none(), async (req, res) => {
     });
   } else {
     const shortUrl = await Url.create({ oriUrl: originalUrl });
-    res.json({ shortUrl: `localhost:4000/${shortUrl.shortUrl}` });
+    res.json({ shortUrl: `https://ez-shortner-api.vercel.app/${shortUrl.shortUrl}` });
   }
 });
 
